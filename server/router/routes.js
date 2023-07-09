@@ -4,7 +4,7 @@ const userController = require('../controllers/user.controller');
 const authController = require('../controllers/auth.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 const roleMiddleware = require('../middlewares/role.middleware');
-const roles = require('../enum/roles');
+const roles = require('../enums/roles');
 
 const router = express.Router();
 

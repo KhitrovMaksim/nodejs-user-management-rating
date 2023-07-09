@@ -3,7 +3,7 @@ const Role = require('../models/role.model');
 const getHashedPassword = require('../../lib/helpers/getHashedPassword');
 const UserDto = require('../dtos/user.dto');
 const tokenService = require('./token.service');
-const roles = require('../enum/roles');
+const roles = require('../enums/roles');
 
 class UserService {
   async registration(newUser) {
