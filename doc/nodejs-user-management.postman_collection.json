@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "af536c27-ee4d-4e85-939b-edb040a9f5de",
+		"name": "nodejs-user-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14034524"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get users with params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/users?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nickname\": \"Sveta1\",\r\n    \"firstname\": \"Sveta1\",\r\n    \"lastname\": \"Sveta1\",\r\n    \"password\": \"Sveta1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/registration"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTkwZTU3ZGEzNWMwNDI0MzM4YzVmMyIsIm5pY2tuYW1lIjoiTWF4MSIsImZpcnN0bmFtZSI6Ik1heDFuZXc2IiwibGFzdG5hbWUiOiJNYXgxIiwicGFzc3dvcmQiOiJlMDZlODExNjllYjAyYTliNGUwZjkzYjliZGY3ZjRkMSIsInVwZGF0ZWRBdCI6IjIwMjMtMDctMDhUMTA6NTI6MjkuMzUzWiIsImlhdCI6MTY4ODgxNzgzMSwiZXhwIjoxNjg4ODIxNDMxfQ.1ra3qU-CQiugubukFaNJOA_ytsy05IJgTMMAz4B7VN8",
+						"type": "text"
+					},
+					{
+						"key": "If-Unmodified-Since",
+						"value": "2023-07-08T10:43:41.186Z",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Max1new6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/update/64a90e57da35c0424338c5f3"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nickname\": \"Sveta7\",\r\n    \"password\": \"Sveta7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/login"
+			},
+			"response": []
+		}
+	]
+}

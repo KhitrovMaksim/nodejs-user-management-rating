@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "64a90e57da35c0424338c5f3"
+  },
+  "nickname": "Max1",
+  "firstname": "Max1new6",
+  "lastname": "Max1",
+  "password": "e06e81169eb02a9b4e0f93b9bdf7f4d1",
+  "deleted_at": null,
+  "created_at": {
+    "$date": "2023-07-08T07:20:55.610Z"
+  },
+  "updated_at": {
+    "$date": "2023-07-08T12:05:35.551Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a9119d306d2aafe1cc4319"
+  },
+  "nickname": "Max2",
+  "firstname": "Max2",
+  "lastname": "Max2",
+  "password": "405e610a0a222bcce407e1bfc96f9233",
+  "deleted_at": null,
+  "created_at": {
+    "$date": "2023-07-08T07:34:53.321Z"
+  },
+  "updated_at": {
+    "$date": "2023-07-08T07:34:53.321Z"
+  },
+  "__v": 0
+}]
