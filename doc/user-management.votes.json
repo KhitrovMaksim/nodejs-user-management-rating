@@ -1,0 +1,153 @@
+[{
+  "_id": {
+    "$oid": "64ab3f6b89275686bfb7c889"
+  },
+  "voter": "64a9cf8c4aaec4c948159b39",
+  "profile": "64a9d774c51f13cc24e4e7e1",
+  "vote": -1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ab402359de36af507d8918"
+  },
+  "voter": "64a9cf8c4aaec4c948159b39",
+  "profile": "64a9d6bd03161b5bf9931bf2",
+  "vote": -1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ab53576a31fea67545b8ed"
+  },
+  "voter": "64a9cf8c4aaec4c948159b39",
+  "profile": "64a9d6b003161b5bf9931bee",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac173ab54cf961dde1fa15"
+  },
+  "voter": "64a9d6b003161b5bf9931bee",
+  "profile": "64a9cf8c4aaec4c948159b39",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac1748b54cf961dde1fa1a"
+  },
+  "voter": "64a9d6b003161b5bf9931bee",
+  "profile": "64a9d6bd03161b5bf9931bf2",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac175bb54cf961dde1fa1f"
+  },
+  "voter": "64a9d6b003161b5bf9931bee",
+  "profile": "64a9d774c51f13cc24e4e7e1",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac1796b54cf961dde1fa25"
+  },
+  "voter": "64a9d6bd03161b5bf9931bf2",
+  "profile": "64a9cf8c4aaec4c948159b39",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac179eb54cf961dde1fa2a"
+  },
+  "voter": "64a9d6bd03161b5bf9931bf2",
+  "profile": "64a9d6b003161b5bf9931bee",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac17aeb54cf961dde1fa2f"
+  },
+  "voter": "64a9d6bd03161b5bf9931bf2",
+  "profile": "64a9d774c51f13cc24e4e7e1",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac17efb54cf961dde1fa35"
+  },
+  "voter": "64a9d774c51f13cc24e4e7e1",
+  "profile": "64a9cf8c4aaec4c948159b39",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac17f7b54cf961dde1fa3a"
+  },
+  "voter": "64a9d774c51f13cc24e4e7e1",
+  "profile": "64a9d6b003161b5bf9931bee",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ac17ffb54cf961dde1fa3f"
+  },
+  "voter": "64a9d774c51f13cc24e4e7e1",
+  "profile": "64a9d6bd03161b5bf9931bf2",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad146463ac79fd74dae076"
+  },
+  "voter": "64ad143a63ac79fd74dae070",
+  "profile": "64a9cf8c4aaec4c948159b39",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad149a63ac79fd74dae07c"
+  },
+  "voter": "64ad143a63ac79fd74dae070",
+  "profile": "64a9d6b003161b5bf9931bee",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad14f5ee78ff8385050580"
+  },
+  "voter": "64ad143a63ac79fd74dae070",
+  "profile": "64a9d6bd03161b5bf9931bf2",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad152c2455519dfd6efe53"
+  },
+  "voter": "64ad143a63ac79fd74dae070",
+  "profile": "64a9d774c51f13cc24e4e7e1",
+  "vote": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad173245631114b7a000aa"
+  },
+  "voter": "64ad171945631114b7a000a3",
+  "profile": "64ad143a63ac79fd74dae070",
+  "vote": 1,
+  "__v": 0
+}]
