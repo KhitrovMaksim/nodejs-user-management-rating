@@ -2,6 +2,7 @@ const express = require('express');
 const { check } = require('express-validator');
 const userController = require('../controllers/user.controller');
 const authController = require('../controllers/auth.controller');
+const voteController = require('../controllers/vote.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 const roleMiddleware = require('../middlewares/role.middleware');
 const roles = require('../enums/roles');
@@ -32,5 +33,8 @@ router.post(
 );
 router.put('/update/:id', authMiddleware, roleMiddleware([roles.admin]), userController.update);
 router.delete('/delete/:id', authMiddleware, roleMiddleware([roles.admin]), userController.delete);
+router.post('/voting/add/:id', authMiddleware, voteController.add);
+router.put('/voting/update/:id', authMiddleware, voteController.update);
+router.delete('/voting/delete/:id', authMiddleware, voteController.delete);
 
 module.exports = router;

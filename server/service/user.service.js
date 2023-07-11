@@ -29,7 +29,38 @@ class UserService {
   }
 
   async getUsers(page, limit) {
-    const users = await User.find();
+    const users = await User.aggregate([
+      {
+        $project: {
+          _id: {
+            $toString: '$_id',
+          },
+          nickname: 1,
+          firstname: 1,
+          lastname: 1,
+        },
+      },
+      {
+        $lookup: {
+          from: 'votes',
+          localField: '_id',
+          foreignField: 'profile',
+          as: 'votes',
+        },
+      },
+      {
+        $project: {
+          _id: 1,
+          nickname: 1,
+          firstname: 1,
+          lastname: 1,
+          rating: {
+            $sum: '$votes.vote',
+          },
+        },
+      },
+    ]);
+
     if (!users) {
       return 'The list of users is empty';
     }
@@ -93,6 +124,7 @@ class UserService {
       firstname: !newData.firstname ? userData.firstname : newData.firstname,
       lastname: !newData.lastname ? userData.lastname : newData.lastname,
       updated_at: new Date().toISOString(),
+      last_vote: !newData.lastVote ? userData.lastVote : newData.lastVote,
     };
 
     await User.updateOne({ _id: newData.id }, newUserData);
@@ -119,6 +151,10 @@ class UserService {
 
     await User.updateOne({ _id: userId }, newUserData);
     return { error: null, userData };
+  }
+
+  async updateLastVote(userData, lastVote) {
+    await User.updateOne({ _id: userData.id }, { last_vote: lastVote });
   }
 }
 

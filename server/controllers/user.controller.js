@@ -82,7 +82,7 @@ class UserController {
       return res.json({ userData, message: 'User successfully deleted' });
     } catch (error) {
       logger.error(`Deleting user error: ${error}`);
-      return res.status(400).json({ message: 'Updating user error' });
+      return res.status(400).json({ message: 'Deleting user error' });
     }
   }
 }

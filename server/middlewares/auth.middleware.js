@@ -18,7 +18,6 @@ module.exports = (req, res, next) => {
     if (!userData) {
       return res.status(401).json({ message: 'Token validation error' });
     }
-
     req.user = userData;
     next();
   } catch (error) {
