@@ -1,6 +1,7 @@
 const User = require('../models/user.model');
 const Role = require('../models/role.model');
-const getHashedPassword = require('../../lib/helpers/getHashedPassword');
+const aggregateQuery = require('../models/queries/aggregate.query');
+const getHashedPassword = require('../lib/helpers/getHashedPassword');
 const UserDto = require('../dtos/user.dto');
 const tokenService = require('./token.service');
 const roles = require('../enums/roles');
@@ -29,37 +30,7 @@ class UserService {
   }
 
   async getUsers(page, limit) {
-    const users = await User.aggregate([
-      {
-        $project: {
-          _id: {
-            $toString: '$_id',
-          },
-          nickname: 1,
-          firstname: 1,
-          lastname: 1,
-        },
-      },
-      {
-        $lookup: {
-          from: 'votes',
-          localField: '_id',
-          foreignField: 'profile',
-          as: 'votes',
-        },
-      },
-      {
-        $project: {
-          _id: 1,
-          nickname: 1,
-          firstname: 1,
-          lastname: 1,
-          rating: {
-            $sum: '$votes.vote',
-          },
-        },
-      },
-    ]);
+    const users = await User.aggregate(aggregateQuery);
 
     if (!users) {
       return 'The list of users is empty';
@@ -153,8 +124,8 @@ class UserService {
     return { error: null, userData };
   }
 
-  async updateLastVote(userData, lastVote) {
-    await User.updateOne({ _id: userData.id }, { last_vote: lastVote });
+  async updateLastVote(id, lastVote) {
+    await User.updateOne({ _id: id }, { last_vote: lastVote });
   }
 }
 

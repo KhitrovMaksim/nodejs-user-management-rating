@@ -7,4 +7,5 @@ module.exports = {
   PRETTY_LOGGING: process.env.PRETTY_LOGGING,
   PORT: 5000,
   SECRET: 'secret key for jwt',
+  HOUR: 3600000,
 };
