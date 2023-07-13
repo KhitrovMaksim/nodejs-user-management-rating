@@ -1,34 +1,132 @@
 [{
   "_id": {
-    "$oid": "64a90e57da35c0424338c5f3"
+    "$oid": "64a9cf8c4aaec4c948159b39"
   },
   "nickname": "Max1",
-  "firstname": "Max1new6",
+  "firstname": "Max1new10",
   "lastname": "Max1",
   "password": "e06e81169eb02a9b4e0f93b9bdf7f4d1",
-  "deleted_at": null,
+  "deleted_at": {
+    "$date": "2023-07-08T21:41:26.309Z"
+  },
+  "role": "user",
   "created_at": {
-    "$date": "2023-07-08T07:20:55.610Z"
+    "$date": "2023-07-08T21:05:16.419Z"
   },
   "updated_at": {
-    "$date": "2023-07-08T12:05:35.551Z"
+    "$date": "2023-07-08T21:41:26.309Z"
   },
-  "__v": 0
+  "__v": 0,
+  "last_vote": {
+    "$date": "2023-07-10T00:39:51.688Z"
+  }
 },
 {
   "_id": {
-    "$oid": "64a9119d306d2aafe1cc4319"
+    "$oid": "64a9d6b003161b5bf9931bee"
   },
   "nickname": "Max2",
   "firstname": "Max2",
   "lastname": "Max2",
   "password": "405e610a0a222bcce407e1bfc96f9233",
-  "deleted_at": null,
+  "deleted_at": {
+    "$date": "2023-07-08T21:41:54.268Z"
+  },
+  "role": "user",
   "created_at": {
-    "$date": "2023-07-08T07:34:53.321Z"
+    "$date": "2023-07-08T21:35:44.417Z"
   },
   "updated_at": {
-    "$date": "2023-07-08T07:34:53.321Z"
+    "$date": "2023-07-08T21:41:54.268Z"
+  },
+  "__v": 0,
+  "last_vote": {
+    "$date": "2023-07-10T14:36:11.547Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64a9d6bd03161b5bf9931bf2"
+  },
+  "nickname": "Max3",
+  "firstname": "Max3",
+  "lastname": "Max3",
+  "password": "b1923f5cfe7dec25badfd76d458e8e73",
+  "deleted_at": {
+    "$date": "2023-07-08T21:47:42.474Z"
+  },
+  "role": "user",
+  "created_at": {
+    "$date": "2023-07-08T21:35:57.931Z"
+  },
+  "updated_at": {
+    "$date": "2023-07-08T21:47:42.474Z"
+  },
+  "__v": 0,
+  "last_vote": {
+    "$date": "2023-07-10T14:37:34.117Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64a9d774c51f13cc24e4e7e1"
+  },
+  "nickname": "Max4",
+  "firstname": "Max4",
+  "lastname": "Max4",
+  "password": "52dc83691e3a77fdf09ce3f5d5d1a952",
+  "deleted_at": null,
+  "role": "admin",
+  "created_at": {
+    "$date": "2023-07-08T21:39:00.330Z"
+  },
+  "updated_at": {
+    "$date": "2023-07-08T21:39:00.330Z"
+  },
+  "__v": 0,
+  "last_vote": {
+    "$date": "2023-07-10T14:38:55.111Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64ad143a63ac79fd74dae070"
+  },
+  "nickname": "Max5",
+  "firstname": "Max5",
+  "lastname": "Max5",
+  "password": "7fa04cb55b0e0e02674d86acb494f865",
+  "deleted_at": null,
+  "role": "user",
+  "last_vote": {
+    "$date": "2023-07-11T08:39:08.684Z"
+  },
+  "created_at": {
+    "$date": "2023-07-11T08:35:06.422Z"
+  },
+  "updated_at": {
+    "$date": "2023-07-11T08:35:06.423Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ad171945631114b7a000a3"
+  },
+  "nickname": "Max6",
+  "firstname": "Max6",
+  "lastname": "Max6",
+  "password": "37d6a03252fb1197e412708b0ad17757",
+  "deleted_at": null,
+  "role": "user",
+  "last_vote": {
+    "$date": "2023-07-11T08:47:46.111Z"
+  },
+  "created_at": {
+    "$date": "2023-07-11T08:47:21.092Z"
+  },
+  "updated_at": {
+    "$date": "2023-07-11T08:47:21.092Z"
   },
   "__v": 0
 }]

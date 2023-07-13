@@ -16,8 +16,7 @@ class TokenService {
 
   validateToken(token) {
     try {
-      const userData = jwt.verify(token, SECRET, null, null);
-      return userData;
+      return jwt.verify(token, SECRET, null, null);
     } catch (error) {
       return null;
     }

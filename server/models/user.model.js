@@ -9,6 +9,7 @@ const UserModel = new Schema({
   updated_at: { type: Date, required: true, default: Date.now },
   deleted_at: { type: Date, required: false, default: null },
   role: { type: String, required: true, ref: 'Role' },
+  last_vote: { type: Date, required: false, default: null },
 });
 
 module.exports = model('User', UserModel);

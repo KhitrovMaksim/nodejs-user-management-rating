@@ -108,6 +108,90 @@
 				"url": "http://localhost:3001/login"
 			},
 			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/delete/64a90e57da35c0424338c5f3"
+			},
+			"response": []
+		},
+		{
+			"name": "Vote add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTljZjhjNGFhZWM0Yzk0ODE1OWIzOSIsIm5pY2tuYW1lIjoiTWF4MSIsImZpcnN0bmFtZSI6Ik1heDFuZXcxMCIsImxhc3RuYW1lIjoiTWF4MSIsInBhc3N3b3JkIjoiZTA2ZTgxMTY5ZWIwMmE5YjRlMGY5M2I5YmRmN2Y0ZDEiLCJ1cGRhdGVkQXQiOiJTdW4gSnVsIDA5IDIwMjMgMDE6NDE6MjYgR01UKzA0MDAgKEFybWVuaWEgU3RhbmRhcmQgVGltZSkiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4ODkxNjUyMCwiZXhwIjoxNjg5MDAyOTIwfQ.ua8ceOtVrfGLCKiADByHQIUAgrPOhrPSNDbFwpsPWSM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/voting/add/64a9cf8c4aaec4c948159b39?vote=increment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"voting",
+						"add",
+						"64a9cf8c4aaec4c948159b39"
+					],
+					"query": [
+						{
+							"key": "vote",
+							"value": "increment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTljZjhjNGFhZWM0Yzk0ODE1OWIzOSIsIm5pY2tuYW1lIjoiTWF4MSIsImZpcnN0bmFtZSI6Ik1heDFuZXcxMCIsImxhc3RuYW1lIjoiTWF4MSIsInBhc3N3b3JkIjoiZTA2ZTgxMTY5ZWIwMmE5YjRlMGY5M2I5YmRmN2Y0ZDEiLCJ1cGRhdGVkQXQiOiJTdW4gSnVsIDA5IDIwMjMgMDE6NDE6MjYgR01UKzA0MDAgKEFybWVuaWEgU3RhbmRhcmQgVGltZSkiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4ODkxNjUyMCwiZXhwIjoxNjg5MDAyOTIwfQ.ua8ceOtVrfGLCKiADByHQIUAgrPOhrPSNDbFwpsPWSM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/voting/update/64a9d6bd03161b5bf9931bf2?vote=increment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"voting",
+						"update",
+						"64a9d6bd03161b5bf9931bf2"
+					],
+					"query": [
+						{
+							"key": "vote",
+							"value": "increment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/voting/delete/64a9d6bd03161b5bf9931bf2"
+			},
+			"response": []
 		}
 	]
 }

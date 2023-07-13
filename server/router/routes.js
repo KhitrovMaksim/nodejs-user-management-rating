@@ -1,10 +1,11 @@
 const express = require('express');
-const { check } = require('express-validator');
+const { check, query } = require('express-validator');
 const userController = require('../controllers/user.controller');
 const authController = require('../controllers/auth.controller');
+const voteController = require('../controllers/vote.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 const roleMiddleware = require('../middlewares/role.middleware');
-const roles = require('../enum/roles');
+const roles = require('../enums/roles');
 
 const router = express.Router();
 
@@ -32,5 +33,23 @@ router.post(
 );
 router.put('/update/:id', authMiddleware, roleMiddleware([roles.admin]), userController.update);
 router.delete('/delete/:id', authMiddleware, roleMiddleware([roles.admin]), userController.delete);
+
+router.post(
+  '/voting/:id',
+  check('id').isMongoId(),
+  query('vote').exists().isIn(['increment', 'decrement']),
+  authMiddleware,
+  voteController.add,
+);
+
+router.put(
+  '/voting/:id',
+  check('id').isMongoId(),
+  query('vote').exists().isIn(['increment', 'decrement']),
+  authMiddleware,
+  voteController.update,
+);
+
+router.delete('/voting/:id', check('id').isMongoId(), authMiddleware, voteController.delete);
 
 module.exports = router;

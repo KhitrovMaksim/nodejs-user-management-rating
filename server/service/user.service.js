@@ -1,9 +1,10 @@
 const User = require('../models/user.model');
 const Role = require('../models/role.model');
-const getHashedPassword = require('../../lib/helpers/getHashedPassword');
+const aggregateQuery = require('../models/queries/aggregate.query');
+const getHashedPassword = require('../lib/helpers/getHashedPassword');
 const UserDto = require('../dtos/user.dto');
 const tokenService = require('./token.service');
-const roles = require('../enum/roles');
+const roles = require('../enums/roles');
 
 class UserService {
   async registration(newUser) {
@@ -29,7 +30,8 @@ class UserService {
   }
 
   async getUsers(page, limit) {
-    const users = await User.find();
+    const users = await User.aggregate(aggregateQuery);
+
     if (!users) {
       return 'The list of users is empty';
     }
@@ -93,6 +95,7 @@ class UserService {
       firstname: !newData.firstname ? userData.firstname : newData.firstname,
       lastname: !newData.lastname ? userData.lastname : newData.lastname,
       updated_at: new Date().toISOString(),
+      last_vote: !newData.lastVote ? userData.lastVote : newData.lastVote,
     };
 
     await User.updateOne({ _id: newData.id }, newUserData);
@@ -119,6 +122,10 @@ class UserService {
 
     await User.updateOne({ _id: userId }, newUserData);
     return { error: null, userData };
+  }
+
+  async updateLastVote(id, lastVote) {
+    await User.updateOne({ _id: id }, { last_vote: lastVote });
   }
 }
 

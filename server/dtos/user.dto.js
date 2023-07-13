@@ -20,6 +20,7 @@ class UserDto {
     this.password = model.password;
     this.updatedAt = model.updated_at;
     this.role = model.role;
+    this.lastVote = model.last_vote;
   }
 }
 

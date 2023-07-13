@@ -6,34 +6,62 @@ activate Server
 activate Mongo
 User -> Server : request: /
 Server --> User: response: redirect to /users
+
 User -> Server : request: /users
 activate Server
 Server -> Mongo : find all users
 Mongo --> Server : all users
 Server --> User: response: list of users
 deactivate Server
+
 User -> Server : request: /users?page=1&limit=5
 activate Server
 Server -> Mongo : find all users
 Mongo --> Server : all users
 Server --> User: response: page 1 with 5 users
 deactivate Server
+
 User -> Server : request: /registration
 activate Server
 Server -> Mongo : save user
 Mongo --> Server : saved user data
 Server --> User: response: new user data
 deactivate Server
+
 User -> Server : request: /login
 activate Server
 Server -> Mongo : find user
 Mongo --> Server :  user
 Server --> User: response: token & user data
 deactivate Server
+
 User -> Server : request: /update/id
 activate Server
 Server -> Mongo : update user
 Mongo --> Server : updated user data
 Server --> User: response: updated user data
+deactivate Server
+
+User -> Server : request: /vote/add/id?vote=increment
+activate Server
+Server -> Mongo : add votes / vote +1
+Server -> Mongo : update user / last vote
+Mongo --> Server : user & votes
+Server --> User: response: user data
+deactivate Server
+
+
+User -> Server : request: /vote/update/id?vote=decrement
+activate Server
+Server -> Mongo : update votes / vote -1
+Mongo --> Server : votes
+Server --> User: response: user data
+deactivate Server
+
+User -> Server : request: /vote/delete/id
+activate Server
+Server -> Mongo : delete votes
+Mongo --> Server : votes
+Server --> User: response: user data
 deactivate Server
 @enduml
